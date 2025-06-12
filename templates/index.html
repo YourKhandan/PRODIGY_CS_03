@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: aliceblue;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        /* 🔷 Header panel */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* 🔽 Center the form */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding-top: 60px;
+            box-sizing: border-box;
+        }
+
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        input[type=password],
+        input[type=submit] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        input[type=submit] {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border: 2px solid #ffc107;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+input[type=submit]:hover {
+    background-color: #ffc107;
+    color: white;
+    border-color: #ffc107;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <!--  Header -->
+    <div class="header">
+        <a href="/">🔐 Password Checker</a>
+    </div>
+
+    <!-- Centered Form -->
+    <div class="container">
+        <form method="POST" action="/result">
+            <h2>Enter Your Password</h2>
+            <input type="password" name="password" required placeholder="Enter a strong password...">
+            <input type="submit" value="Check Strength">
+        </form>
+    </div>
+
+</body>
+</html>

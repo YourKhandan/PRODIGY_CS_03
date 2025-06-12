@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Strength Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* aliceblue tone */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 🔷 Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* 🎯 Result Box Centering */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding-top: 80px; /* space for header */
+            box-sizing: border-box;
+        }
+
+        .result-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 500px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center; /* 💥 This line centers the heading */
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .back-link {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px 0;
+    font-weight: 600;
+    border-radius: 6px;
+    color: #007bff;
+    border: 2px solid #007bff;
+    background-color: white;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.back-link:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- 🔷 Header -->
+    <div class="header">
+        <a href="/">🔐 Password Checker</a>
+    </div>
+
+    <!-- 🎯 Result Box -->
+    <div class="container">
+        <div class="result-box">
+            <h2>🔍 Password Analysis</h2>
+            <p><strong>Password:</strong> {{ password }}</p>
+            <p><strong>Strength Score:</strong> {{ score }}%</p>
+            <ul>
+                {% for line in feedback %}
+                    <li>{{ line }}</li>
+                {% endfor %}
+            </ul>
+            <p><strong>🕒 Estimated Time to Crack:</strong> {{ crack_time }} seconds</p>
+            <a href="/" class="back-link">🔁 Check Another Password</a>
+        </div>
+    </div>
+
+</body>
+</html>
