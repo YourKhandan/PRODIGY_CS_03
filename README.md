@@ -23,9 +23,8 @@ A simple web tool built with **Flask** to evaluate the strength of a password ba
 
 ## 🚀 Live Demo
 
-🔗 [Click here to try it live](https://your-render-link.render.com)
+🔗 [Click to try it live->](https://password-checker-3-b17c.onrender.com/)
 
-*(replace with your actual deployed Render URL)*
 
 ## 📁 Project Structure
 ├── app.py
@@ -38,7 +37,7 @@ A simple web tool built with **Flask** to evaluate the strength of a password ba
 ## 📦 Installation
 
 (inside Powershell)
-git clone https://github.com/yourusername/password-checker.git
+git clone https://github.com/YourKhandan/Prodigy_CS_03.git
 cd password-checker
 pip install -r requirements.txt
 python app.py
