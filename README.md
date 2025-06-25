@@ -28,15 +28,6 @@ In powershell, you need to install
 
 🔗 [Click to try it live->](https://password-checker-3-b17c.onrender.com/)
 
-
-## 📁 Project Structure
-├── app.py
-├── requirements.txt
-├── Procfile
-├── templates/
-│ ├── index.html
-│ └── result.html
-
 ## 📦 Installation
 
 (inside Powershell)
